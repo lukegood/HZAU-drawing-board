@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>743</width>
-    <height>566</height>
+    <width>821</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>743</width>
+     <width>821</width>
      <height>23</height>
     </rect>
    </property>
@@ -37,8 +37,26 @@
     <addaction name="action_120"/>
     <addaction name="action_2"/>
    </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>绘制(&amp;H)</string>
+    </property>
+    <addaction name="action_S"/>
+   </widget>
+   <widget class="QMenu" name="menu_P">
+    <property name="title">
+     <string>画笔设置(&amp;P)</string>
+    </property>
+    <addaction name="actionred"/>
+    <addaction name="actiongreen"/>
+    <addaction name="separator"/>
+    <addaction name="actionsize_11"/>
+    <addaction name="actionsize_12"/>
+   </widget>
    <addaction name="menu_F"/>
    <addaction name="menu_G"/>
+   <addaction name="menu_H"/>
+   <addaction name="menu_P"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -48,6 +66,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="action_N"/>
+   <addaction name="action_S"/>
    <addaction name="action"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -92,6 +111,31 @@
   <action name="action_2">
    <property name="text">
     <string>更多信息</string>
+   </property>
+  </action>
+  <action name="action_S">
+   <property name="text">
+    <string>开始绘制(S)</string>
+   </property>
+  </action>
+  <action name="actionred">
+   <property name="text">
+    <string>color : red</string>
+   </property>
+  </action>
+  <action name="actiongreen">
+   <property name="text">
+    <string>color : green</string>
+   </property>
+  </action>
+  <action name="actionsize_11">
+   <property name="text">
+    <string>size : 12</string>
+   </property>
+  </action>
+  <action name="actionsize_12">
+   <property name="text">
+    <string>size : 22</string>
    </property>
   </action>
  </widget>
