@@ -4,6 +4,7 @@
 #include<QToolButton>
 #include<QSpinBox>
 #include<QLabel>
+#include<QMessageBox>//消息对话框的头文件
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -12,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     QMenu *editMenu = ui->menuBar->addMenu(tr("编辑(&E)")); // 添加编辑菜单
     QAction *action_Open = editMenu->addAction(             // 添加打开菜单
-                                                            QIcon(":/image/images/open.png"),tr("打开文件(&O)"));
+    QIcon(":/image/images/open.png"),tr("打开文件(&O)"));
     action_Open->setShortcut(QKeySequence("Ctrl+O"));       // 设置快捷键
     ui->mainToolBar->addAction(action_Open);                // 在工具栏中添加动作
 
@@ -63,4 +64,14 @@ void MainWindow::on_action_triggered()
 {
     ui->dockWidget->show();
     ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘板工具箱已打开。"), 5000);
+}
+
+void MainWindow::on_action_120_triggered()
+{
+    QMessageBox::about(this,tr("华中农业大学120周年校庆"),tr("华中农业大学是教育部直属全国重点大学，国家“211”工程建设高校，2018年是华中农业大学建校120周年！\n了解详情请访问www.hzau.edu.cn"));
+}
+
+void MainWindow::on_action_2_triggered()
+{
+    QMessageBox::about(this,tr("更多信息"),tr("作者：王李光\nwlg1996@webmail.hzau.edu.cn\n参考文献：《Qt Creator快速入门（霍亚飞编著）》"));
 }

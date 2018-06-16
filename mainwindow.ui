@@ -30,7 +30,15 @@
     <addaction name="action_N"/>
     <addaction name="action"/>
    </widget>
+   <widget class="QMenu" name="menu_G">
+    <property name="title">
+     <string>关于(&amp;G)</string>
+    </property>
+    <addaction name="action_120"/>
+    <addaction name="action_2"/>
+   </widget>
    <addaction name="menu_F"/>
+   <addaction name="menu_G"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -74,6 +82,16 @@
   <action name="action">
    <property name="text">
     <string>绘板工具箱</string>
+   </property>
+  </action>
+  <action name="action_120">
+   <property name="text">
+    <string>华中农业大学120周年校庆</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>更多信息</string>
    </property>
   </action>
  </widget>
