@@ -78,72 +78,110 @@ void PaintWidget::paintEvent(QPaintEvent *)
         painter.setPen(Qt::red);
         painter.drawText(100, 300, tr("庆祝华中农业大学建校120周年！"));
     }
-//    QRectF rectangle(70.0, 40.0, 80.0, 60.0);
-//    int startAngle = 30 * 16;
-//    int spanAngle = 120 * 16;
-//    //绘制圆弧
-//    painter.drawArc(rectangle, startAngle, spanAngle);
 
-//    //重新设置画笔
-//    pen.setWidth(1);
-//    pen.setStyle(Qt::SolidLine);
-//    painter.setPen(pen);
-//    //绘制一个矩形
-//    painter.drawRect(160, 20, 50, 40);
-//    // 创建画刷
-//    QBrush brush(QColor(0, 0, 255), Qt::Dense4Pattern);
-//    // 使用画刷
-//    painter.setBrush(brush);
-//    // 绘制椭圆
-//    painter.drawEllipse(220, 20, 50, 50);
-//    // 设置纹理
-//    //brush.setTexture(QPixmap("../mydrawing/yafeilinux.png"));
-//    // 重新使用画刷
-//    painter.setBrush(brush);
-//    // 定义四个点
-//    static const QPointF points[4] = {
-//        QPointF(270.0, 80.0),
-//        QPointF(290.0, 10.0),
-//        QPointF(350.0, 30.0),
-//        QPointF(390.0, 70.0)
-//    };
-//    // 使用四个点绘制多边形
-//    painter.drawPolygon(points, 4);
-
-//    // 使用画刷填充一个矩形区域
-//    painter.fillRect(QRect(10, 100, 150, 20), QBrush(Qt::darkYellow));
-//    // 擦除一个矩形区域的内容
-//    painter.eraseRect(QRect(50, 0, 50, 120));
-
-
-//    // 线性渐变
-//    QLinearGradient linearGradient(QPointF(40, 190), QPointF(70, 190));
-//    // 插入颜色
-//    linearGradient.setColorAt(0, Qt::yellow);
-//    linearGradient.setColorAt(0.5, Qt::red);
-//    linearGradient.setColorAt(1, Qt::green);
-//    // 指定渐变区域以外的区域的扩散方式
-//    linearGradient.setSpread(QGradient::RepeatSpread);
-//    // 使用渐变作为画刷
-//    painter.setBrush(linearGradient);
-//    painter.drawRect(10, 170, 90, 40);
-
-//    // 辐射渐变
-//    QRadialGradient radialGradient(QPointF(200, 190), 50, QPointF(275, 200));
-//    radialGradient.setColorAt(0, QColor(255, 255, 100, 150));
-//    radialGradient.setColorAt(1, QColor(0, 0, 0, 50));
-//    painter.setBrush(radialGradient);
-//    painter.drawEllipse(QPointF(200, 190), 50, 50);
-
-//    // 锥形渐变
-//    QConicalGradient conicalGradient(QPointF(350, 190), 60);
-//    conicalGradient.setColorAt(0.2, Qt::cyan);
-//    conicalGradient.setColorAt(0.9, Qt::black);
-//    painter.setBrush(conicalGradient);
-//    painter.drawEllipse(QPointF(350, 190), 50, 50);
-
-//    // 画笔使用线性渐变来绘制直线和文字
-//    painter.setPen(QPen(linearGradient,2));
-//    painter.drawLine(0, 280, 100, 280);
-//    painter.drawText(150, 280, tr("helloQt!"));
+    if(picture_kind == 1){
+        //设置圆弧的样式
+        QPen pen(Qt::yellow, 10, Qt::DotLine, Qt::RoundCap, Qt::RoundJoin);
+        painter.setPen(pen);
+        QRectF rectangle(100.0, 350.0, 80.0, 60.0);
+        int startAngle = 270 * 16;
+        int spanAngle = 120 * 16;
+        //绘制圆弧
+        painter.drawArc(rectangle, startAngle, spanAngle);
+        //重新设置画笔
+        pen.setWidth(10);
+        pen.setStyle(Qt::SolidLine);
+        painter.setPen(pen);
+        //绘制一个矩形
+        painter.drawRect(300, 350, 50, 40);
+        //设置画笔的样式
+        QPen pen1(Qt::green, 10, Qt::DotLine, Qt::RoundCap, Qt::RoundJoin);
+        painter.setPen(pen1);
+        QRectF rectangle1(200.0, 350.0, 80.0, 60.0);
+        int startAngle1 = 180 * 16;
+        int spanAngle1 = 120 * 16;
+        //绘制圆弧
+        painter.drawArc(rectangle1, startAngle1, spanAngle1);
+        //在不同位置重绘圆弧
+        pen.setStyle(Qt::DotLine);
+        painter.setPen(pen);
+        QRectF rectangle3(400.0, 350.0, 80.0, 60.0);
+        painter.drawArc(rectangle3, startAngle, spanAngle);
+        //在不同位置重绘圆弧
+        painter.setPen(pen1);
+        QRectF rectangle4(500.0, 350.0, 80.0, 60.0);
+        painter.drawArc(rectangle4, startAngle1, spanAngle1);
+    }
+    else if(picture_kind == 2){
+        QPen pen(Qt::yellow, 8, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
+        painter.setPen(pen);
+        // 创建画刷
+        QBrush brush(QColor(0, 0, 255));
+        // 使用画刷
+        painter.setBrush(brush);
+        // 绘制椭圆
+        painter.drawEllipse(100, 350, 50, 50);
+        painter.drawEllipse(500, 350, 50, 50);
+        // 定义四个点
+        static const QPointF points[4] = {
+            QPointF(300.0, 400.0),
+            QPointF(300.0, 350.0),
+            QPointF(350.0, 350.0),
+            QPointF(350.0, 400.0)
+        };
+        // 创建画刷
+        QBrush brush1(QColor(0, 255, 0), Qt::Dense4Pattern);
+        // 使用画刷
+        painter.setBrush(brush1);
+        // 使用四个点绘制多边形
+        painter.drawPolygon(points, 4);
+    }
+    else if(picture_kind == 3){
+        QPen pen(Qt::yellow, 6, Qt::DotLine, Qt::RoundCap, Qt::RoundJoin);
+        painter.setPen(pen);
+        // 使用画刷填充一个矩形区域
+        painter.fillRect(QRect(100, 350, 150, 20), QBrush(Qt::green));
+        // 使用画刷填充一个矩形区域
+        painter.fillRect(QRect(500, 350, 150, 20), QBrush(Qt::blue));
+        // 线性渐变
+        QLinearGradient linearGradient(QPointF(40, 190), QPointF(70, 190));
+        // 插入颜色
+        linearGradient.setColorAt(0, Qt::yellow);
+        linearGradient.setColorAt(0.5, Qt::red);
+        linearGradient.setColorAt(1, Qt::green);
+        // 指定渐变区域以外的区域的扩散方式
+        linearGradient.setSpread(QGradient::RepeatSpread);
+        // 使用渐变作为画刷
+        painter.setBrush(linearGradient);
+        painter.drawRect(300, 350, 90, 40);
+    }
+    else if(picture_kind == 4){
+        QPen pen(Qt::yellow, 6, Qt::DotLine, Qt::RoundCap, Qt::RoundJoin);
+        painter.setPen(pen);
+        // 辐射渐变
+        QRadialGradient radialGradient(QPointF(200, 190), 50, QPointF(275, 200));
+        radialGradient.setColorAt(0, Qt::cyan);
+        radialGradient.setColorAt(1, Qt::green);
+        painter.setBrush(radialGradient);
+        painter.drawEllipse(QPointF(200, 400), 50, 50);
+        // 锥形渐变
+        QConicalGradient conicalGradient(QPointF(350, 190), 60);
+        conicalGradient.setColorAt(0.2, Qt::cyan);
+        conicalGradient.setColorAt(0.9, Qt::blue);
+        painter.setBrush(conicalGradient);
+        painter.drawEllipse(QPointF(450, 400), 50, 50);
+    }
+    else if(picture_kind == 5){
+        QPen pen(Qt::yellow, 5, Qt::DotLine, Qt::RoundCap, Qt::RoundJoin);
+        painter.setPen(pen);
+        // 线性渐变
+        QLinearGradient linearGradient(QPointF(40, 190), QPointF(70, 190));
+        // 插入颜色
+        linearGradient.setColorAt(1, Qt::yellow);
+        linearGradient.setColorAt(0.3, Qt::red);
+        linearGradient.setColorAt(0.7, Qt::green);
+        // 画笔使用线性渐变来绘制直线
+        painter.setPen(QPen(linearGradient,2));
+        painter.drawLine(100, 350, 500, 350);
+    }
 }

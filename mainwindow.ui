@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>821</width>
-    <height>600</height>
+    <width>891</width>
+    <height>576</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,43 +19,42 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>821</width>
+     <width>891</width>
      <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_F">
     <property name="title">
-     <string>文件(&amp;F)</string>
+     <string>快速样式(&amp;F)</string>
     </property>
     <addaction name="action_N"/>
+    <addaction name="action_3"/>
+    <addaction name="action_4"/>
+    <addaction name="separator"/>
     <addaction name="action"/>
    </widget>
    <widget class="QMenu" name="menu_G">
     <property name="title">
      <string>关于(&amp;G)</string>
     </property>
+    <addaction name="action_6"/>
     <addaction name="action_120"/>
     <addaction name="action_2"/>
    </widget>
-   <widget class="QMenu" name="menu_H">
-    <property name="title">
-     <string>绘制(&amp;H)</string>
-    </property>
-    <addaction name="action_S"/>
-   </widget>
    <widget class="QMenu" name="menu_P">
     <property name="title">
-     <string>画笔设置(&amp;P)</string>
+     <string>花样画笔(&amp;P)</string>
     </property>
     <addaction name="actionred"/>
     <addaction name="actiongreen"/>
+    <addaction name="actioncolor_blue"/>
+    <addaction name="actioncolor_blue_2"/>
     <addaction name="separator"/>
     <addaction name="actionsize_11"/>
     <addaction name="actionsize_12"/>
    </widget>
-   <addaction name="menu_F"/>
    <addaction name="menu_G"/>
-   <addaction name="menu_H"/>
+   <addaction name="menu_F"/>
    <addaction name="menu_P"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -65,14 +64,14 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="action_N"/>
-   <addaction name="action_S"/>
+   <addaction name="action_6"/>
    <addaction name="action"/>
+   <addaction name="action_120"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QDockWidget" name="dockWidget">
    <property name="windowTitle">
-    <string>绘板工具箱</string>
+    <string>快捷绘制箱</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -82,40 +81,77 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>40</y>
-       <width>75</width>
-       <height>23</height>
+       <y>190</y>
+       <width>71</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="text">
-      <string>PushButton</string>
+      <string>缤纷心情
+快速样式</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>70</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>辉煌华农
+快速样式</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>130</y>
+       <width>71</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>清新茶语
+快速样式</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>20</y>
+       <width>71</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>如何使用？</string>
      </property>
     </widget>
    </widget>
   </widget>
   <action name="action_N">
    <property name="text">
-    <string>新建文件(&amp;N)</string>
+    <string>缤纷心情</string>
    </property>
   </action>
   <action name="action">
    <property name="text">
-    <string>绘板工具箱</string>
+    <string>打开快捷绘制箱</string>
    </property>
   </action>
   <action name="action_120">
    <property name="text">
-    <string>华中农业大学120周年校庆</string>
+    <string>关于华中农业大学120周年校庆</string>
    </property>
   </action>
   <action name="action_2">
    <property name="text">
     <string>更多信息</string>
-   </property>
-  </action>
-  <action name="action_S">
-   <property name="text">
-    <string>开始绘制(S)</string>
    </property>
   </action>
   <action name="actionred">
@@ -130,12 +166,37 @@
   </action>
   <action name="actionsize_11">
    <property name="text">
-    <string>size : 12</string>
+    <string>size : 16</string>
    </property>
   </action>
   <action name="actionsize_12">
    <property name="text">
     <string>size : 22</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>辉煌华农</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>清新茶语</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>如何使用？</string>
+   </property>
+  </action>
+  <action name="actioncolor_blue">
+   <property name="text">
+    <string>color : blue</string>
+   </property>
+  </action>
+  <action name="actioncolor_blue_2">
+   <property name="text">
+    <string>color : yellow</string>
    </property>
   </action>
  </widget>
