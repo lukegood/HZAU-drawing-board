@@ -27,9 +27,9 @@
     <property name="title">
      <string>快速样式(&amp;F)</string>
     </property>
-    <addaction name="action_N"/>
     <addaction name="action_3"/>
     <addaction name="action_4"/>
+    <addaction name="action_N"/>
     <addaction name="separator"/>
     <addaction name="action"/>
    </widget>

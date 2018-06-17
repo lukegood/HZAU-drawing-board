@@ -104,7 +104,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_action_triggered()
 {
     ui->dockWidget->show();
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘板工具箱已打开。"), 5000);
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-快捷绘制箱已打开。"), 5000);
 }
 
 void MainWindow::on_action_120_triggered()
@@ -130,87 +130,87 @@ void MainWindow::on_pushButton_4_clicked()
 void MainWindow::on_actionred_triggered()
 {
     emit changePenColor(Qt::red);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::on_actiongreen_triggered()
 {
     emit changePenColor(Qt::green);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 
 void MainWindow::on_actioncolor_blue_triggered()
 {
     emit changePenColor(Qt::blue);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::on_actioncolor_blue_2_triggered()
 {
     emit changePenColor(Qt::yellow);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::on_actionsize_11_triggered()
 {
     emit changePenSize(16);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::on_actionsize_12_triggered()
 {
     emit changePenSize(22);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_F1_Triggered(){
     emit changeFont(1);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_F2_Triggered(){
     emit changeFont(2);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_F3_Triggered(){
     emit changeFont(3);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_L_Triggered(){
     emit changePicture(1);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_R_Triggered(){
     emit changePicture(2);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_C_Triggered(){
     emit changePicture(3);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_L1_Triggered(){
     emit changePicture(4);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::action_R1_Triggered(){
     emit changePicture(5);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-绘制完成。"), 5000);
 }
 
 void MainWindow::on_action_N_triggered()
 {
-    emit changePenColor(Qt::darkBlue);
+    emit changePenColor(Qt::yellow);
     emit changeFont(3);
     emit changePicture(2);
-    emit changePenSize(14);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-缤纷心情已启用。"));
+    emit changePenSize(22);
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-缤纷心情已启用。"), 5000);
 }
 
 
@@ -220,16 +220,16 @@ void MainWindow::on_action_3_triggered()
     emit changeFont(2);
     emit changePicture(4);
     emit changePenSize(25);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-辉煌华农已启用。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-辉煌华农已启用。"), 5000);
 }
 
 void MainWindow::on_action_4_triggered()
 {
     emit changePenColor(Qt::green);
     emit changeFont(1);
-    emit changePicture(5);
+    emit changePicture(1);
     emit changePenSize(14);
-    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-清新茶语已启用。"));
+    ui->statusBar->showMessage(tr("HZAU校庆创意绘板-清新茶语已启用。"), 5000);
 }
 
 void MainWindow::doPrint()                    // 打印
@@ -295,7 +295,7 @@ void MainWindow::on_pushButton_3_clicked()
 {
     emit changePenColor(Qt::green);
     emit changeFont(1);
-    emit changePicture(5);
+    emit changePicture(1);
     emit changePenSize(17);
     QMessageBox::about(this,tr("HZAU校庆创意绘板-快捷绘制箱提示"),tr("缤纷茶语快速样式绘制完成！"));
 }
